@@ -12,14 +12,15 @@ import com.example.scholarexpert.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        fragmentReplacement(new AttendanceFragment() );
-        binding.bottomNavigationView.setOnItemReselectedListener(item -> {
-            switch (item.getItemId()){
+        fragmentReplacement(new AttendanceFragment());
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
                 case R.id.attendance_menu:
                     fragmentReplacement(new AttendanceFragment());
                     break;
@@ -29,13 +30,18 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.image_menu:
                     fragmentReplacement(new folderFragment());
                     break;
+
+
             }
+            return true;
         });
     }
-    public void fragmentReplacement(Fragment fragment){
+
+    public void fragmentReplacement(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout2,fragment);
+        fragmentTransaction.replace(R.id.frameLayout2, fragment);
+        fragmentTransaction.commit();
 
     }
 }
