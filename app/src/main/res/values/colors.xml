@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="theme_1_blue">#495fe8</color>
+    <color name="theme_1_gray">#f2f3f9</color>
+    <color name="theme_1_dark_gray">#a4a5b3</color>
+    <color name="theme_1_dark_blue">#101743</color>
+    <color name="theme_1_dark_black">#595b6a</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -10,9 +15,11 @@
     <color name="light_yellow">#FFFFE0</color>
     <color name="yellow">#FFFF00</color>
     <color name="snow">#FFFAFA</color>
+    <color name="green_custom_light">#1a985a</color>
     <color name="floral_white">#FFFAF0</color>
     <color name="lemon_chiffon">#FFFACD</color>
     <color name="cornsilk">#FFF8DC</color>
+    <color name="light_grey_ui">#f5f5f5</color>
     <color name="seashell">#FFF5EE</color>
     <color name="lavender_blush">#FFF0F5</color>
     <color name="papaya_whip">#FFEFD5</color>
