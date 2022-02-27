@@ -2,4 +2,13 @@
     <string name="app_name">ScholarExpert</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_subjects">All Subject</string>
+    <string name="goal">Goal</string>
+    <string name="total_attendance">Total Attendance</string>
+    <string name="_75">75%</string>
+    <string name="todo">TODO</string>
+    <string name="_63_1">63.1%</string>
+    <string name="attendance">Attendance</string>
+    <string name="to_do">To Do</string>
+    <string name="image_manager">Image Manager</string>
 </resources>

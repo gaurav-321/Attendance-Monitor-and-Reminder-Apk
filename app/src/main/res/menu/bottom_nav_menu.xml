@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item android:title="Attendance"
+    <item android:title="@string/attendance"
         android:id="@+id/attendance_menu"
         android:icon="@drawable/home_attendance_24"/>
-    <item android:title="To Do"
+    <item android:title="@string/to_do"
         android:id="@+id/todo_menu"
         android:icon="@drawable/to_do_24"/>
-    <item android:title="Image Manager"
+    <item android:title="@string/image_manager"
         android:id="@+id/image_menu"
         android:icon="@drawable/folder_menu_24"/>
 </menu>
