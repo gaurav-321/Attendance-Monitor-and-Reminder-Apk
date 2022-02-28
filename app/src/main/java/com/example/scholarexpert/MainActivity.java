@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -18,17 +19,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.scholarexpert.databinding.ActivityMainBinding;
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     Integer presentLecture = 10;
     Integer absentLecture = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        Objects.requireNonNull(getSupportActionBar()).hide();
         fragmentReplacement(new AttendanceFragment());
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
@@ -47,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
     public void fragmentReplacement(Fragment fragment) {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -55,8 +61,9 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
     }
+
     @SuppressLint("UseCompatLoadingForDrawables")
-    public void all_subject_clicked(View view){
+    public void all_subject_clicked(View view) {
         Button button1 = findViewById(R.id.all_subject_button);
         Button button2 = findViewById(R.id.all_subject_button2);
         button1.setBackground(getResources().getDrawable(R.drawable.atten_button_sel));
@@ -65,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
         button2.setBackground(getResources().getDrawable(R.drawable.atten_button_del));
 
 
-
     }
+
     @SuppressLint("UseCompatLoadingForDrawables")
-    public void timetable_clicked(View view){
+    public void timetable_clicked(View view) {
         Button button1 = findViewById(R.id.all_subject_button);
         Button button2 = findViewById(R.id.all_subject_button2);
         button1.setBackground(getResources().getDrawable(R.drawable.atten_button_del));
@@ -77,15 +84,15 @@ public class MainActivity extends AppCompatActivity {
         button2.setBackground(getResources().getDrawable(R.drawable.atten_button_sel));
 
 
-
     }
-    public void add_subject(View view){
+
+    public void add_subject(View view) {
         ProgressBar progress = findViewById(R.id.progressBar);
-        progress.setProgress(progress.getProgress()+1);
+        progress.setProgress(progress.getProgress() + 1);
         TextView progresstext = findViewById(R.id.textView4);
         TextView progresstext2 = findViewById(R.id.textView5);
-        progresstext.setText(progress.getProgress()+"%");
-        progresstext2.setText(progress.getProgress()+"%");
+        progresstext.setText(progress.getProgress() + "%");
+        progresstext2.setText(progress.getProgress() + "%");
     }
     /*
     public void yes_button_click(View view){
